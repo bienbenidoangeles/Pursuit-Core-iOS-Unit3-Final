@@ -55,5 +55,60 @@ class ElementsTests: XCTestCase {
         //arrange
         endPoints(endPoint: "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements_remaining", expectedDataCount: 13000)
     }
+    
+    func testGetAtomicElements(){
+        //arrange
+        let exp = XCTestExpectation(description: "searches found")
+        var elementsArr = [AtomicElement]()
+        let expectedElements = 100
+        var givenElements = Int()
+        
+        //act
+        ElementAPIClient.getElements { (result) in
+            switch result{
+            case.failure(let appError):
+                XCTFail("App Err: \(appError)")
+            case .success(let elements):
+                elementsArr = elements
+                givenElements = elementsArr.count
+                exp.fulfill()
+            }
+        }
+        wait(for: [exp], timeout: 5.0)
+        //assert
+        XCTAssertEqual(expectedElements, givenElements, "Expected \(expectedElements) shows, instead of \(givenElements)")
+    }
+    
+    func testPostAtomicElements(){
+        //arrange
+        let postingElement = AtomicElement(name: "Mendelevium", symbol: "Md", number: 101, atomicMass: 258, melt: nil, boil: nil, discoveredBy: "Lawrence Berkeley National Laboratory", favoritedBy: "testEx")
 
+          let data = try! JSONEncoder().encode(postingElement)
+          
+          let exp = XCTestExpectation(description: "element posted successfully")
+          
+          let url = URL(string: "http://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/favorites")!
+          
+          var request = URLRequest(url: url)
+          request.httpMethod = "POST"
+          request.httpBody = data
+          
+          // required to be valid JSON data being uploaded
+          request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+          
+          // act
+          NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+              XCTFail("failed with error: \(appError)")
+            case .success(let data):
+              // assert
+              let createdElement = try! JSONDecoder().decode(AtomicElement.self, from: data)
+              XCTAssertEqual(postingElement.name, createdElement.name)
+              exp.fulfill()
+            }
+          }
+          
+          wait(for: [exp], timeout: 5.0)
+        }
 }
