@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var atomicSymbolLabel: UILabel!
     @IBOutlet weak var atomicName: UILabel!
     @IBOutlet weak var elementDetailsLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     var element: AtomicElement?
 
@@ -41,8 +42,6 @@ class DetailViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
     
     func loadData(){
@@ -58,6 +57,11 @@ class DetailViewController: UIViewController {
             case .success(let image):
                 DispatchQueue.main.async {
                     self?.elementImageView.image = image
+                    if validElement.favoritedBy != nil {
+                        self?.favoriteButton.isHidden = true
+                    } else {
+                        self?.favoriteButton.isHidden = false
+                    }
                 }
             }
         }

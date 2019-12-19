@@ -182,6 +182,7 @@
                         <outlet property="atomicSymbolLabel" destination="oi6-Ys-hmQ" id="aBp-Kh-DH4"/>
                         <outlet property="elementDetailsLabel" destination="a8g-ip-SUM" id="mxC-un-iaZ"/>
                         <outlet property="elementImageView" destination="8op-lN-Gqc" id="eZ6-zg-2A3"/>
+                        <outlet property="favoriteButton" destination="V6f-9E-rR0" id="R0B-4i-bfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rX6-5r-dss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
