@@ -14,14 +14,35 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var atomicNumLabel:UILabel!
     @IBOutlet weak var atomicMassLabel: UILabel!
     @IBOutlet weak var atomicSymbolLabel: UILabel!
+    @IBOutlet weak var atomicName: UILabel!
     @IBOutlet weak var elementDetailsLabel: UILabel!
     
-    var element: Element?
+    var element: AtomicElement?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadData()
+    }
+    
+    @IBAction func favorite(){
+        guard let validElement = element else { fatalError("failed to pass element to image view")
+        }
+        let element = AtomicElement(name: validElement.name, symbol: validElement.symbol, number: validElement.number, atomicMass: validElement.atomicMass, melt: validElement.melt, boil: validElement.boil, discoveredBy: validElement.discoveredBy, favoritedBy: "B.A.")
+        ElementAPIClient.postElements(for: element) {[weak self] (result) in
+            switch result{
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "FAILURE", message: "\(appError)")
+                }
+            case .success:
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "SUCCESS", message: "Podcast posted successfully")
+                }
+            }
+        }
+        
+        
     }
     
     func loadData(){
@@ -40,20 +61,8 @@ class DetailViewController: UIViewController {
         }
         atomicNumLabel.text = "\(validElement.number)"
         atomicMassLabel.text = "\(validElement.atomicMass)"
-        atomicMassLabel.text = "\(validElement.symbol)"
-        
+        atomicSymbolLabel.text = "\(validElement.symbol)"
+        atomicName.text = "\(validElement.name)"
         elementDetailsLabel.text = "Melting Point: \(validElement.melt)\nBoiling Point: \(validElement.boil)\nDiscovered By: \(validElement.discoveredBy)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

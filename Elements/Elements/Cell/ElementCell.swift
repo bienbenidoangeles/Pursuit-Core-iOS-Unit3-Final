@@ -23,7 +23,7 @@ class ElementCell: UITableViewCell {
     
     
     
-    func configureCell(for element: Element){
+    func configureCell(for element: AtomicElement){
         self.elementImageString = "http://www.theodoregray.com/periodictable/Tiles/\(String(format: "%03d", element.number))/s7.JPG" 
         guard let validURLString = self.elementImageString else {
             return

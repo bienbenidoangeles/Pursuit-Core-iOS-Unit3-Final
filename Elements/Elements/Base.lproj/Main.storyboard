@@ -95,65 +95,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6f-9E-rR0">
-                                <rect key="frame" x="179.5" y="686" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Favorite"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8op-lN-Gqc">
                                 <rect key="frame" x="83" y="108" width="248" height="248.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8op-lN-Gqc" secondAttribute="height" multiplier="1:1" id="isH-un-Fz4"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMr-v2-v7h">
-                                <rect key="frame" x="20" y="447" width="166" height="165.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMr-v2-v7h">
+                                <rect key="frame" x="83" y="376.5" width="248" height="248.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-xz-AsK">
-                                        <rect key="frame" x="8" y="8" width="120" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atomic Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-xz-AsK">
+                                        <rect key="frame" x="8" y="8" width="232" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Mass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-ls-Px7">
-                                        <rect key="frame" x="34" y="57" width="98" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-Ys-hmQ">
+                                        <rect key="frame" x="93.5" y="95" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oi6-Ys-hmQ">
-                                        <rect key="frame" x="100" y="136" width="58" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY9-9g-FUS">
+                                        <rect key="frame" x="100.5" y="124" width="47" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atomic Mass" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-ls-Px7">
+                                        <rect key="frame" x="8" y="220" width="232" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="oi6-Ys-hmQ" firstAttribute="centerX" secondItem="TY9-9g-FUS" secondAttribute="centerX" id="SRL-TY-SCa"/>
+                                    <constraint firstItem="TY9-9g-FUS" firstAttribute="centerX" secondItem="HMr-v2-v7h" secondAttribute="centerX" id="ULq-Wv-Ay7"/>
+                                    <constraint firstItem="Zud-xz-AsK" firstAttribute="leading" secondItem="HMr-v2-v7h" secondAttribute="leading" constant="8" id="XFW-eB-iVS"/>
+                                    <constraint firstItem="TY9-9g-FUS" firstAttribute="top" secondItem="oi6-Ys-hmQ" secondAttribute="bottom" constant="8" id="bIS-8r-72M"/>
+                                    <constraint firstItem="fea-ls-Px7" firstAttribute="leading" secondItem="HMr-v2-v7h" secondAttribute="leading" constant="8" id="czi-1W-gyM"/>
+                                    <constraint firstAttribute="bottom" secondItem="fea-ls-Px7" secondAttribute="bottom" constant="8" id="ena-Q5-BAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="fea-ls-Px7" secondAttribute="trailing" constant="8" id="nc1-qZ-aYS"/>
                                     <constraint firstAttribute="width" secondItem="HMr-v2-v7h" secondAttribute="height" multiplier="1:1" id="oW9-NO-Bvh"/>
+                                    <constraint firstItem="Zud-xz-AsK" firstAttribute="top" secondItem="HMr-v2-v7h" secondAttribute="top" constant="8" id="rNW-RB-D7B"/>
+                                    <constraint firstItem="TY9-9g-FUS" firstAttribute="top" secondItem="HMr-v2-v7h" secondAttribute="centerY" id="vVJ-YI-uiI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zud-xz-AsK" secondAttribute="trailing" constant="8" id="yE1-Fv-LDn"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Melting Point:, Boiling Point: , and Discovered By" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-ip-SUM">
-                                <rect key="frame" x="194" y="365" width="200" height="314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melting Point:, Boiling Point: , and Discovered By" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-ip-SUM">
+                                <rect key="frame" x="20" y="633" width="374" height="42.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6f-9E-rR0">
+                                <rect key="frame" x="179.5" y="695.5" width="55" height="30"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="favorite" destination="BQx-SP-Mzo" eventType="touchUpInside" id="Uta-3I-FzI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HMr-v2-v7h" firstAttribute="centerX" secondItem="8op-lN-Gqc" secondAttribute="centerX" id="2fP-L8-imM"/>
+                            <constraint firstItem="HMr-v2-v7h" firstAttribute="top" secondItem="8op-lN-Gqc" secondAttribute="bottom" constant="20" id="Apu-rz-6n6"/>
+                            <constraint firstItem="a8g-ip-SUM" firstAttribute="top" secondItem="HMr-v2-v7h" secondAttribute="bottom" constant="8" id="F7L-ZK-11M"/>
                             <constraint firstItem="8op-lN-Gqc" firstAttribute="centerX" secondItem="PBL-X1-1s3" secondAttribute="centerX" id="PRC-Cr-UkV"/>
+                            <constraint firstItem="PBL-X1-1s3" firstAttribute="trailing" secondItem="a8g-ip-SUM" secondAttribute="trailing" constant="20" id="PdW-Um-sA3"/>
+                            <constraint firstItem="V6f-9E-rR0" firstAttribute="centerX" secondItem="a8g-ip-SUM" secondAttribute="centerX" id="UxR-na-RbB"/>
                             <constraint firstItem="8op-lN-Gqc" firstAttribute="top" secondItem="PBL-X1-1s3" secondAttribute="top" constant="20" id="W4A-Qt-fgJ"/>
-                            <constraint firstItem="HMr-v2-v7h" firstAttribute="width" secondItem="EXc-3d-ljm" secondAttribute="width" multiplier="0.4" id="WvP-Ng-hth"/>
+                            <constraint firstItem="HMr-v2-v7h" firstAttribute="width" secondItem="EXc-3d-ljm" secondAttribute="width" multiplier="0.6" id="WvP-Ng-hth"/>
+                            <constraint firstItem="V6f-9E-rR0" firstAttribute="top" secondItem="a8g-ip-SUM" secondAttribute="bottom" constant="20" id="mx0-ol-cTP"/>
+                            <constraint firstItem="a8g-ip-SUM" firstAttribute="leading" secondItem="PBL-X1-1s3" secondAttribute="leading" constant="20" id="q91-cL-B3Y"/>
                             <constraint firstItem="8op-lN-Gqc" firstAttribute="width" secondItem="EXc-3d-ljm" secondAttribute="width" multiplier="0.6" id="zMx-0v-H0N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PBL-X1-1s3"/>
                     </view>
                     <navigationItem key="navigationItem" id="dFQ-7R-evf"/>
+                    <connections>
+                        <outlet property="atomicMassLabel" destination="fea-ls-Px7" id="SCp-aC-Kmt"/>
+                        <outlet property="atomicName" destination="TY9-9g-FUS" id="9hI-z3-Iiq"/>
+                        <outlet property="atomicNumLabel" destination="Zud-xz-AsK" id="PSv-Fw-777"/>
+                        <outlet property="atomicSymbolLabel" destination="oi6-Ys-hmQ" id="aBp-Kh-DH4"/>
+                        <outlet property="elementDetailsLabel" destination="a8g-ip-SUM" id="mxC-un-iaZ"/>
+                        <outlet property="elementImageView" destination="8op-lN-Gqc" id="eZ6-zg-2A3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rX6-5r-dss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

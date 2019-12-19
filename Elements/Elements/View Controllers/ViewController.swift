@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var elements = [Element](){
+    var elements = [AtomicElement](){
         didSet{
             DispatchQueue.main.async {
                 self.tableView.reloadData()

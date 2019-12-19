@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Element: Decodable{
+struct AtomicElement: Codable{
     let name: String
     let symbol: String
     let number: Int
@@ -16,7 +16,8 @@ struct Element: Decodable{
     let melt: Int
     let boil: Int
     let discoveredBy: String
-    private enum CodingKeys: String, CodingKey{
+    let favoritedBy: String?
+    private enum CodingKeys: String, CodingKey, Codable{
         case name
         case symbol
         case number
@@ -24,5 +25,6 @@ struct Element: Decodable{
         case melt
         case boil
         case discoveredBy = "discovered_by"
+        case favoritedBy
     }
 }
