@@ -12,7 +12,7 @@ struct AtomicElement: Codable{
     let name: String
     let symbol: String
     let number: Int
-    let atomicMass: Double
+    let atomicMass: Double?
     let melt: IntOrDouble?
     let boil: IntOrDouble?
     let discoveredBy: String?

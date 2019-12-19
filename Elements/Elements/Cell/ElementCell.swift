@@ -45,7 +45,7 @@ class ElementCell: UITableViewCell {
         }
         
         nameLabel.text = element.name
-        elementDetails.text = "\(element.symbol)(\(element.number)) \(element.atomicMass)"
+        elementDetails.text = "\(element.symbol)(\(element.number)) \(element.atomicMass ?? 0.0)"
     }
 
 }

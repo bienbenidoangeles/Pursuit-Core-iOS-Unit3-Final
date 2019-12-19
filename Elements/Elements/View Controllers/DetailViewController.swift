@@ -62,7 +62,7 @@ class DetailViewController: UIViewController {
             }
         }
         atomicNumLabel.text = "\(validElement.number)"
-        atomicMassLabel.text = "\(validElement.atomicMass)"
+        atomicMassLabel.text = "\(validElement.atomicMass ?? 0.0)"
         atomicSymbolLabel.text = "\(validElement.symbol)"
         atomicName.text = "\(validElement.name)"
         elementDetailsLabel.text = "Melting Point: \(element?.melt ?? IntOrDouble.double(0) )\nBoiling Point: \(element?.boil ?? IntOrDouble.double(0))\nDiscovered By: \(element?.discoveredBy ?? "N/A")"
