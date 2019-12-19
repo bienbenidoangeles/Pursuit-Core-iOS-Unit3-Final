@@ -56,13 +56,15 @@ class DetailViewController: UIViewController {
                     self?.elementImageView.image = UIImage(systemName: "exclaimationmark.triangle.fill")
                 }
             case .success(let image):
-                self?.elementImageView.image = image
+                DispatchQueue.main.async {
+                    self?.elementImageView.image = image
+                }
             }
         }
         atomicNumLabel.text = "\(validElement.number)"
         atomicMassLabel.text = "\(validElement.atomicMass)"
         atomicSymbolLabel.text = "\(validElement.symbol)"
         atomicName.text = "\(validElement.name)"
-        elementDetailsLabel.text = "Melting Point: \(validElement.melt)\nBoiling Point: \(validElement.boil)\nDiscovered By: \(validElement.discoveredBy)"
+        elementDetailsLabel.text = "Melting Point: \(element?.melt ?? IntOrDouble.double(0) )\nBoiling Point: \(element?.boil ?? IntOrDouble.double(0))\nDiscovered By: \(element?.discoveredBy ?? "N/A")"
     }
 }

@@ -27,6 +27,15 @@ class ViewController: UIViewController {
     dataSources()
   }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detalVC = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("failted to segue")
+        }
+        
+        let element = elements[indexPath.row]
+        detalVC.element = element
+    }
+    
     func loadData(){
         ElementAPIClient.getElements { (result) in
             switch result{
