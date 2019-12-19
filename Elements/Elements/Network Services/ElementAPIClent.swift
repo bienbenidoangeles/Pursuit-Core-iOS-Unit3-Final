@@ -77,4 +77,26 @@ struct ElementAPIClient {
             }
         }
     }
+    
+    static func getRemainingElements(completion: @escaping (Result<[AtomicElement], AppError>) -> ()){
+        let endPointURLString = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements_remaining"
+        guard let url = URL(string: endPointURLString) else {
+            completion(.failure(.badURL(endPointURLString)))
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        NetworkHelper.shared.performDataTask(with: urlRequest) { (result) in
+            switch result{
+            case .failure(let appError):
+                completion(.failure(.networkClientError(appError)))
+            case .success(let data):
+                do{
+                    let elements = try JSONDecoder().decode([AtomicElement].self, from: data)
+                    completion(.success(elements))
+                }catch{
+                    completion(.failure(.decodingError(error)))
+                }
+            }
+        }
+    }
 }

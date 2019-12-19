@@ -47,6 +47,16 @@ class ViewController: UIViewController {
                 self.elements = elements
             }
         }
+        ElementAPIClient.getRemainingElements { (result) in
+            switch result{
+                case .failure(let appError):
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Failed to load Data", message: "\(appError)")
+                    }
+                case .success(let elements):
+                    self.elements += elements
+            }
+        }
     }
     
     func dataSources(){
