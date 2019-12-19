@@ -19,6 +19,7 @@
 		F19155F723ABD22B00DDCFFA /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19155F623ABD22B00DDCFFA /* ViewController+Extension.swift */; };
 		F19155F923ABD24E00DDCFFA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19155F823ABD24E00DDCFFA /* UIImageView+Extensions.swift */; };
 		F19155FB23ABD3B900DDCFFA /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19155FA23ABD3B900DDCFFA /* ElementCell.swift */; };
+		F19155FD23ABD95400DDCFFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19155FC23ABD95400DDCFFA /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F19155F623ABD22B00DDCFFA /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		F19155F823ABD24E00DDCFFA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F19155FA23ABD3B900DDCFFA /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
+		F19155FC23ABD95400DDCFFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5734756321DA90C700FB6177 /* ViewController.swift */,
+				F19155FC23ABD95400DDCFFA /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				F19155F723ABD22B00DDCFFA /* ViewController+Extension.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				F19155F523ABD06600DDCFFA /* ElementAPIClent.swift in Sources */,
+				F19155FD23ABD95400DDCFFA /* DetailViewController.swift in Sources */,
 				F19155F923ABD24E00DDCFFA /* UIImageView+Extensions.swift in Sources */,
 				F19155F323ABCF2F00DDCFFA /* ElementsModel.swift in Sources */,
 			);
